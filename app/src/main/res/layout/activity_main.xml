@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/main_color"
+  tools:context=".MainActivity">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="37dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/cvContent"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:backgroundTint="@color/grey"
+      android:orientation="vertical"
+      app:cardCornerRadius="20sp">
+
+      <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+          android:id="@+id/ivPhoto"
+          android:layout_width="96dp"
+          android:layout_height="80dp"
+          android:scaleType="fitXY"
+          app:shapeAppearanceOverlay="@style/corner_radius_20" />
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginLeft="24dp"
+          android:orientation="vertical">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="18dp"
+            android:orientation="horizontal">
+
+            <ImageView
+              android:layout_width="20dp"
+              android:layout_height="20dp"
+              android:src="@drawable/ic_baseline_access_time_24" />
+
+            <TextView
+              android:id="@+id/tvTime"
+              style="@style/main_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp" />
+          </LinearLayout>
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+              android:layout_width="20dp"
+              android:layout_height="20dp"
+              android:src="@drawable/ic_outline_location_on_24" />
+
+            <TextView
+              android:id="@+id/tvLocation"
+              style="@style/main_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:text="@string/i_don_t_know"/>
+          </LinearLayout>
+        </LinearLayout>
+      </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      android:foregroundGravity="center_vertical"
+      android:orientation="horizontal">
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCamera"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/green"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        app:icon="@drawable/ic_outline_camera_alt_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:shapeAppearanceOverlay="@style/corner_radius_10" />
+
+      <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDelete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/green"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        app:icon="@drawable/ic_baseline_delete_outline_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:shapeAppearanceOverlay="@style/corner_radius_10" />
+
+      <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAnimation"
+        android:layout_width="205dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/roboto_regular"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/get_animation"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:icon="@drawable/ic_baseline_arrow_forward_24"
+        app:iconGravity="textEnd"
+        app:shapeAppearanceOverlay="@style/corner_radius_50" />
+    </LinearLayout>
+  </LinearLayout>
+</RelativeLayout>
